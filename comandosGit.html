@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos de Git</title>
+</head>
+<body>
+    <ul>
+        <li>Q
+            <ul>
+                <li>la usaremos para salir (cuando estemos trabajando en consola)</li>
+            </ul>
+        </li>
+        <li>doble guion significa una palabra completa</li>
+        <li>un guion es una abreviatura</li>
+        <li>git --version
+            <ul>
+                <li>indica la version instalada de git</li>
+            </ul>
+        </li>
+        <li>git help
+            <ul>
+                <li>informacion sobre la yuda de git</li>
+            </ul>
+        </li>
+        <li>git --help commit
+            <ul>
+                <li>Mostrará ayuda sobre el comando 'commit'</li>
+            </ul>
+        </li>
+        <li>git --help config
+            <ul>
+                <li>muestra las opciones distintas de configuracion</li>
+            </ul>
+        </li>
+        <li>git config --global user.name "nombre de usuario"
+            <ul>
+                <li>Este comando nos permitirá introducir el nombre de usuario</li>
+            </ul>
+        </li>
+        <li>git config --global user.email "direccion@correo.com"
+            <ul>
+                <li>Este comando nos permitirá introducir el correo de usuario</li>
+            </ul>
+        </li>
+        <li>git config --global --e
+            <ul>
+                <li>Este comando nos permite confirmar los datos anteriores</li>
+                <li>para salir usaremos:
+                    <ul>
+                        <li>esc</li>
+                        <li>dos puntos</li>
+                        <li>w para escribir</li>
+                        <li>q de quit</li>
+                        <li>! para salir</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>git init
+            <ul>
+                <li>Crea, inicia el repositorio</li>
+            </ul>
+        </li>
+        <li>git config --global init.defaultBranch "name"
+            <ul>
+                <li>Linea que nos sugiere git para renombrar la rama principal de nuestro repositorio</li>
+            </ul>
+        </li>
+        <li>gist status
+            <ul>
+                <li>Nos daraá información sobre nuestro repositorio</li>
+            </ul>
+        </li>
+        <li>git add .
+            <ul>
+                <li>Prepara todos los archivos para hacer commit</li>
+            </ul>
+        </li>
+        <li>git reset archivoQueNoQuieroHacerCommir.txt
+            <ul>
+                <li>Hará que el archivo especificado no sea considerado para el commit</li>
+            </ul>
+        </li>
+        <li>git commit -m "Primer commit"
+            <ul>
+                <li>Linea que hacemos cuando queremos hacer un commit agregando una breve descripcion al titulo</li>
+            </ul>
+        </li>
+        <li>CRLF
+            <ul>
+                <li>Se refiere a una interpretación de un caracter</li>
+                <li>git config core.autocrlf true</li>
+                <li>linea sugerida para reparar este error</li>
+            </ul>
+        </li>
+        <li>git checkout -- .
+            <ul>
+                <li>Este comando hará que volvamos a nuestro ultimo commit</li>
+            </ul>
+        </li>
+        <li>git branch
+            <ul>
+                <li>mostrara la rama en la que estamos ubicados</li>
+            </ul>
+        </li>
+        <li>git branch -m master main
+            <ul>
+                <li>Ésta línea cambiará el nombre de "master" a "main"</li>
+            </ul>
+        </li>
+        <li>git config --global init.defaultBranch main
+            <ul>
+                <li>Esta línea hará la configuración de forma global, de tal modo que afectará a todos los repositorios que se hagan en el equipo</li>
+                <li>git config --global -e (para comprobar en init)</li>
+                <li>: q ! para salir</li>
+            </ul>
+        </li>
+        <li>git commit -am "Descripcion del commit"
+            <ul>
+                <li>Con este comando no podemos ahorrar el comando "add ."" y "commit" en uno solo</li>
+                <li>este comando solo funciona si ya le estamos dando seguimiento al archivo</li>
+            </ul>
+        </li>
+        <li>.gitkeep
+            <ul>
+                <li>Este es un archivo que nos servirá para colocarlos en carpetas vacías pero que necesitamos se les de seguimiento con git</li>
+            </ul>
+        </li>
+        <li>git add css/
+            <ul>
+                <li>Esta línea hará que se agreguen al stage todos los archivos de la carpeta css</li>
+            </ul>
+        </li>
+    </ul>
+    
+</body>
+</html>
