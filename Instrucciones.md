@@ -1,3 +1,11 @@
 # Instalación
 
-Creamos un archivo de instalacion en el directorio raiz del repositorio
+1. Seguir estos pasos
+```
+El comando actual de la instalacion es YARM
+```
+
+2. Ejecutar el comando
+```
+npm start
+```
