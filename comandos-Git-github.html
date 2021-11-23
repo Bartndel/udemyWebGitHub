@@ -203,10 +203,49 @@
                 <li>Con esta linea podemos volver al estado del repositorio que necesitemos</li>
             </ul>
         </li>
+        <li>git mv file.md file2.md
+            <ul>
+                <li>Con esta linea podemos renomnrar nuestros archivos y no perder en el index el registros de cuando fue creado y cuando fue renombrado</li>
+                <li>Se debe hacer commit para que el comando proceda</li>
+                <li>Una vez renombrado, debemos hacer commit para guardad dicho cambio</li>
+            </ul>
+        </li>
+        <li>Tipos de reset
+            <ul>
+                <li>Soft
+                    <ul>
+                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                        <li>Conserva los cambios en el stage area</li>
+                        <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
+                    </ul>
+                </li>
+                <li>Mixed
+                    <ul>
+                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                        <li>Deshace los cambios en el stage area</li>
+                        <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
+                    </ul>
+                </li>
+                <li>Hard
+                    <ul>
+                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                        <li>Deshace los cambios en el stage area</li>
+                        <li>Deshace los cambios que tengas en tus archivos (working directory)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>git rm file-to-delete.md
+            <ul>
+                <li>Con esta línea podemos eliminar archivos en git</li>
+                <li>Si hacemos git "checkout -- ." o git reset --hard" podremos recuperer el archivo, ya que este aun permanece en el stage</li>
+                <li>Para terminar de eliminar el archivo debemos hacer un commit</li>
+            </ul>
+        </li>
     </ul>
 
     <!-- <script src="JS/script001.js"></script> -->
-    <script src="JS/imc.js"></script>
+    <!-- <script src="JS/imc.js"></script> -->
     
 </body>
 </html>
