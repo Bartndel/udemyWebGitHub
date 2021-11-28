@@ -284,6 +284,123 @@
                 <li>Con esta linea creamos una rama nueva y al mismo tiempo nos cambiamos hacia ella</li>
             </ul>
         </li>
+        <li>git tag nombreEtiqueta
+            <ul>
+                <li>Con esta línea podemos hacer tags en nuestro repositorio</li>
+            </ul>
+        </li>
+        <li>git tag
+            <ul>
+                <li>Usamos este comando para ver las etiquetas en nuestro repositorio</li>
+            </ul>
+        </li>
+        <li>git tag -d nombreEtiqueta
+            <ul>
+                <li>Con esta linea podemos eliminar nuestras etiquetas</li>
+            </ul>
+        </li>
+        <li>git tag -a v1.0.0 #HASH
+            <ul>
+                <li>Crea una etiqueta posicionada con el HASH que le indiquemos</li>
+            </ul>
+        </li>
+        <li>git show nombreEtiqueta
+            <ul>
+                <li>Con esta linea podemos obtener informacion de la etiqueta a la que hagamos referencia</li>
+            </ul>
+        </li>
+        <li>git stash
+            <ul>
+                <li>Guarda el directorio, lo indexa, wip</li>
+                <li>sin hacer commit</li>
+            </ul>
+        </li>
+        <li>git stash list
+            <ul>
+                <li>Muestra la informacion sobre los stahs existentes</li>
+            </ul>
+        </li>
+        <li>git stash pop
+            <ul>
+                <li>Con esta linea volvemos a tener aceso a la informacion que enviamos al stash</li>
+            </ul>
+        </li>
+        <li>git stash clear
+            <ul>
+                <li>Con esta linea podemoseliminar todos los stashs</li>
+                <li>siempre podemos usar "git reflog" para recuperar los hash</li>
+            </ul>
+        </li>
+        <li>git stash save "descripcion del stash"
+            <ul>
+                <li>Poedemos usar esta linea para guardar el stash con una breve descripcion</li>
+            </ul>
+        </li>
+        <li>git stash list --stat
+            <ul>
+                <li>Con esta linea puedo tener acceso a mas informacion sobre los stashs existentes</li>
+            </ul>
+        </li>
+        <li>git stash apply stash@{#}
+            <ul>
+                <li>Con esta linea puedo recuperar un stash de forma puntual citanto su hash</li>
+                <li>Al hacer de nuevo un "git stash" lo regreso al stash pero lo duplicará, eviandolo al stash@{0}</li>
+            </ul>
+        </li>
+        <li>git stash drop stash@{#}
+            <ul>
+                <li>Con esta linea pueo eliminar de fomra puntual un stash</li>
+            </ul>
+        </li>
+        <li>git stash show stash@{#}
+            <ul>
+                <li>Con esta linea puedo obtener informacion de un stahs puntual</li>
+            </ul>
+        </li>
+        <li>git rebase ramaInvolucrada
+            <ul>
+                <li>Reposiciona los commits de una rama con otra rama</li>
+                <li>Debo estar posicionado en la rama a donde quiero que se muevan los cambios</li>
+                <li>Despues me cambio de rama</li>
+                <li>Hago merge</li>
+                <li>Eliminar rama que ya no ocuparé</li>
+            </ul>
+        </li>
+        <li>git rebase -i HEAD~#
+            <ul>
+                <li>el head puede ser sustituido por un tag o hash</li>
+                <li># equivale al numero de commits que deseo editar</li>
+                <li>entramos al modo de edicion:
+                    <ul>
+                        <li>a para editar</li>
+                        <li>usar el comando que me proporciona la pantalla</li>
+                        <li>si solo hare la union de dos commits, usare solo una "s" y en el siguiente commit dejar "p" </li>
+                        <li>esc salir</li>
+                        <li>w escribir</li>
+                        <li>q salir</li>
+                        <li>! salir</li>
+                        <li>Confirmar el mensaje del commit</li>
+                        <li>salir de nuevo de la interfaz con esc:wq!</li>
+                    </ul>
+                </li>
+                <li>separar commits
+                    <ul>
+                        <li>git checkout -- file.html hara que omita los cambios del archivo</li>
+                        <li>aqui puedo hacer un rebase interactivo con "git rebase -i HEAD~3"</li>
+                        <li>"git commit --amend" me sirve para hacer cambios</li>
+                        <li>"git rebase --continue" cuando este satisfecho con los cambios</li>
+                        <li>el "git status" me muestra que estoy en un rebase interactivo</li>
+                        <li>"git reset HEAD^" en el ejercicio hacen este comando, me regresara al momento haces de hacer la union de los commits</li>
+                        <li>ahora puedo hacer "git add file.html" para subirlo al stage</li>
+                        <li>"git s" me mostrara que un archivo esta en stage y el otro no</li>
+                        <li>hago commit para agregar el cambio</li>
+                        <li>hago un segundo commit con los cambios del otro archivo "git commit -am 'mensaje del commit'"</li>
+                        <li>"git rebase --continue" para terminar el rebase</li>
+                        <li>si me presenta un error "detached" puedo hacer "git checkout master"</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
     </ul>
 
     <!-- <script src="JS/script001.js"></script> -->
