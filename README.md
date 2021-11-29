@@ -6,6 +6,7 @@ Esto fue añadido desde VSCode
 
 ## GitHub
 
-Haciendo cambios desde GitHub
-otro cambio desde github
-cambios en git
+1. Haciendo cambios desde GitHub
+2. otro cambio desde github
+3. cambios en git
+4. Ejercicio de pull
