@@ -10,3 +10,4 @@ Esto fue añadido desde VSCode
 2. otro cambio desde github
 3. cambios en git
 4. Ejercicio de pull
+5. Corrigiendo archivo en git
