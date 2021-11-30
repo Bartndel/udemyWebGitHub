@@ -11,3 +11,14 @@ Esto fue añadido desde VSCode
 3. cambios en git
 4. Ejercicio de pull
 5. Corrigiendo archivo en git
+
+* A
+* B
+* C
+  * c1
+  * c2
+  * c3
+
+![GitHub Logo](https://posicionweb.es/images/GitHub-Logo.jpg)
+
+## Logo de _GitHub_
