@@ -116,460 +116,420 @@
             </section>
         </section>
 
-    </main>
+    
+        <section class="contenedor">
+            <div>
+                <h2 class="titulo-seccion">Básicos</h2>
+                <div class="item comando">
+                    <h3>q</h3>
+                    <p class="copy">La usaremos para salir (cuando estemos trabajando en consola).<br>Doble guion significa una palabra completa.<br>Un guion es una abreviatura.</p>
+                </div>
+                <div class="item comando">
+                    <h3>git --version</h3>
+                    <p class="copy">indica la version instalada de git</p>
+                </div>
+                <div class="item comando">
+                    <h3>git help</h3>
+                    <p class="copy">informacion sobre la yuda de git</p>
+                </div>
+                <div class="item comando">
+                    <h3>Git --help commit.</h3>
+                    <p>Mostrará ayuda sobre el comando 'commit'</p>
+                </div>
+                <div class="item comando">
+                    <h3>git --help config</h3>
+                    <p>muestra las opciones distintas de configuracion</p>
 
-    <ul>
-        <li>Q
-            <ul>
-                <li>la usaremos para salir (cuando estemos trabajando en consola)</li>
+                </div>
+
+
+            </div>
+                    <li>git config --global user.name "nombre de usuario"
+                    <li>Este comando nos permitirá introducir el nombre de usuario</li>
+                    
+                    <li>git config --global user.email "direccion@correo.com"
+                            <li>Este comando nos permitirá introducir el correo de usuario</li>
+                    
+                    <li>git config --global -e
+                    <li>Este comando nos permite confirmar los datos anteriores</li>
+                    <li>para salir usaremos:
+                                    <li>esc</li>
+                                    <li>dos puntos</li>
+                                    <li>w para escribir</li>
+                                    <li>q de quit</li>
+                                    <li>! para salir</li>
+                    
+                    <li>git init
+                    <li>Crea, inicia el repositorio</li>
+                    
+                    <li>git config --global init.defaultBranch "name"
+                    <li>Linea que nos sugiere git para renombrar la rama principal de nuestro repositorio</li>
+                    
+                    <li>gist status
+                    <li>Nos daraá información sobre nuestro repositorio</li>
+                    
+                    <li>git add .
+                    <li>Prepara todos los archivos para hacer commit</li>
+                    
+                    <li>git reset archivoQueNoQuieroHacerCommir.txt
+                    <li>Hará que el archivo especificado no sea considerado para el commit</li>
+                    
+                    <li>git commit -m "Primer commit"
+                    <li>Linea que hacemos cuando queremos hacer un commit agregando una breve descripcion al titulo</li>
+                    
+                    <li>CRLF
+                    <li>Se refiere a una interpretación de un caracter</li>
+                    <li>git config core.autocrlf true</li>
+                    <li>linea sugerida para reparar este error</li>
+                    
+                    <li>git checkout -- .
+                    <li>Este comando hará que volvamos a nuestro ultimo commit</li>
+                    
+                    <li>git branch
+                    <li>mostrara la rama en la que estamos ubicados</li>
+                    
+                    <li>git branch -m master main
+                    <li>Ésta línea cambiará el nombre de "master" a "main"</li>
+                    
+                    <li>git config --global init.defaultBranch main
+                            <li>Esta línea hará la configuración de forma global, de tal modo que afectará a todos los repositorios que se hagan en el equipo</li>
+                            <li>git config --global -e (para comprobar en init)</li>
+                            <li>: q ! para salir</li>
+                    
+                    <li>git commit -am "Descripcion del commit"
+                            <li>Con este comando no podemos ahorrar el comando "add ."" y "commit" en uno solo</li>
+                            <li>este comando solo funciona si ya le estamos dando seguimiento al archivo</li>
+                    
+                    <li>.gitkeep
+                    <li>Este es un archivo que nos servirá para colocarlos en carpetas vacías pero que necesitamos se les de seguimiento con git</li>
+                    
+                    <li>git add css/
+                    <li>Esta línea hará que se agreguen al stage todos los archivos de la carpeta css</li>
+                    
+                    <li>git status --short
+                    <li>Informe condensado del repositorio</li>
+                    
+                    <li>git config --global alias.(letra designada por nosotros) "status --short"
+                    <li>Esta linea nos servira para crear nuestros propios alias</li>
+                    
+                    <li>git config --global -e
+                        <ul>
+                            <li>Esta linea nos sirve para editar los alias</li>
+                            <li>Para salir:
+                                <ul>
+                                    <li>esc</li>
+                                    <li>dos puntos</li>
+                                    <li>w (escribir)</li>
+                                    <li>q (salir)</li>
+                                    <li>!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>git diff
+                        <ul>
+                            <li>"a" es la version anterior</li>
+                            <li>"b" es la version actual</li>
+                        </ul>
+                    </li>
+                    <li>git diff --staged
+                        <ul>
+                            <li>Con esta línea podremos ver la información cuando los archivos esten en el "stage"</li>
+                        </ul>
+                    </li>
+                    <li>git commit --amend -m "Mensaje del commit"
+                        <ul>
+                            <li>Con este comando podemos editar el texto de nuestro commit</li>
+                        </ul>
+                    </li>
+                    <li>git reset --soft HEAD^
+                        <ul>
+                            <li>HEAD está apuntando al último commit</li>
+                            <li>^ indica el ultimo commit antes del HEAD</li>
+                            <li>^2, ^3, podemos establecer tantos commits anteriores como deseemos</li>
+                        </ul>
+                    </li>
+                    <li>$ git add -A
+                        <ul>
+                            <li>git config core.autocrlf true</li>
+                            <li>Si tenemos esta advertencia, podemos configurar la linea superior para evitar que se presente</li>
+                        </ul>
+                    </li>
+                    <li>git reset --soft "hash"
+                        <ul>
+                            <li>Esta línea nos permite ir a un commit determinado y agregar información</li>
+                            <li>Llos commits postyeriores al commit seleccionado se perderán</li>
+                        </ul>
+                    </li>
+                    <li>git reflog
+                        <ul>
+                            <li>Muestra el historial de los commits realizados</li>
+                        </ul>
+                    </li>
+                    <li>git reset --hard "hash"
+                        <ul>
+                            <li>Con esta linea podemos volver al estado del repositorio que necesitemos</li>
+                        </ul>
+                    </li>
+                    <li>git mv file.md file2.md
+                        <ul>
+                            <li>Con esta linea podemos renomnrar nuestros archivos y no perder en el index el registros de cuando fue creado y cuando fue renombrado</li>
+                            <li>Se debe hacer commit para que el comando proceda</li>
+                            <li>Una vez renombrado, debemos hacer commit para guardad dicho cambio</li>
+                        </ul>
+                    </li>
+                    <li>Tipos de reset
+                        <ul>
+                            <li>Soft
+                                <ul>
+                                    <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                                    <li>Conserva los cambios en el stage area</li>
+                                    <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
+                                </ul>
+                            </li>
+                            <li>Mixed
+                                <ul>
+                                    <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                                    <li>Deshace los cambios en el stage area</li>
+                                    <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
+                                </ul>
+                            </li>
+                            <li>Hard
+                                <ul>
+                                    <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
+                                    <li>Deshace los cambios en el stage area</li>
+                                    <li>Deshace los cambios que tengas en tus archivos (working directory)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>git rm file-to-delete.md
+                        <ul>
+                            <li>Con esta línea podemos eliminar archivos en git</li>
+                            <li>Si hacemos git "checkout -- ." o git reset --hard" podremos recuperer el archivo, ya que este aun permanece en el stage</li>
+                            <li>Para terminar de eliminar el archivo debemos hacer un commit</li>
+                        </ul>
+                    </li>
+                    <li>Fuera de git
+                        <ul>
+                            <li>Para renombnrar fuera de git, despues de cambiar el nombre, tenemos que añadir el archivo al stage y despues hacer commit</li>
+                            <li>Para eliminar, despues de haber eliminado el archivo, debemos hacer un commit</li>
+                        </ul>
+                    </li>
+                    <li>git branch ramaNueva
+                        <ul>
+                            <li>Este comando nos sirve para crear ramas nuevas</li>
+                        </ul>
+                    </li>
+                    <li>git checkout ramaNueva
+                        <ul>
+                            <li>Con esta línea nos podemos cambiar de rama</li>
+                        </ul>
+                    </li>
+                    <li>git merge ramaNueva
+                        <ul>
+                            <li>Con esta línea podemos unir nuestra rama secundaria a la principal</li>
+                            <li>Para hacer esta operacion tenemoas quwe estar en la rama destino</li>
+                        </ul>
+                    </li>
+                    <li>git branch
+                        <ul>
+                            <li>Con esta linea podemos ver cuantas ramas existen en nuestro repositorio</li>
+                        </ul>
+                    </li>
+                    <li>git branch -d ramaNueva
+                        <ul>
+                            <li>Con esta línea eliminamos las ramas</li>
+                        </ul>
+                    </li>
+                    <li>git branch -d ramaNueva -f
+                        <ul>
+                            <li>Con esta línea forzamos la eliminacion de la rama en caso de estar haciendo el merge con información que no se esté usando</li>
+                        </ul>
+                    </li>
+                    <li>git checkout -b ramaNueva
+                        <ul>
+                            <li>Con esta linea creamos una rama nueva y al mismo tiempo nos cambiamos hacia ella</li>
+                        </ul>
+                    </li>
+                    <li>git tag nombreEtiqueta
+                        <ul>
+                            <li>Con esta línea podemos hacer tags en nuestro repositorio</li>
+                        </ul>
+                    </li>
+                    <li>git tag
+                        <ul>
+                            <li>Usamos este comando para ver las etiquetas en nuestro repositorio</li>
+                        </ul>
+                    </li>
+                    <li>git tag -d nombreEtiqueta
+                        <ul>
+                            <li>Con esta linea podemos eliminar nuestras etiquetas</li>
+                        </ul>
+                    </li>
+                    <li>git tag -a v1.0.0 #HASH
+                        <ul>
+                            <li>Crea una etiqueta posicionada con el HASH que le indiquemos</li>
+                        </ul>
+                    </li>
+                    <li>git show nombreEtiqueta
+                        <ul>
+                            <li>Con esta linea podemos obtener informacion de la etiqueta a la que hagamos referencia</li>
+                        </ul>
+                    </li>
+                    <li>git stash
+                        <ul>
+                            <li>Guarda el directorio, lo indexa, wip</li>
+                            <li>sin hacer commit</li>
+                        </ul>
+                    </li>
+                    <li>git stash list
+                        <ul>
+                            <li>Muestra la informacion sobre los stahs existentes</li>
+                        </ul>
+                    </li>
+                    <li>git stash pop
+                        <ul>
+                            <li>Con esta linea volvemos a tener aceso a la informacion que enviamos al stash</li>
+                        </ul>
+                    </li>
+                    <li>git stash clear
+                        <ul>
+                            <li>Con esta linea podemoseliminar todos los stashs</li>
+                            <li>siempre podemos usar "git reflog" para recuperar los hash</li>
+                        </ul>
+                    </li>
+                    <li>git stash save "descripcion del stash"
+                        <ul>
+                            <li>Poedemos usar esta linea para guardar el stash con una breve descripcion</li>
+                        </ul>
+                    </li>
+                    <li>git stash list --stat
+                        <ul>
+                            <li>Con esta linea puedo tener acceso a mas informacion sobre los stashs existentes</li>
+                        </ul>
+                    </li>
+                    <li>git stash apply stash@{#}
+                        <ul>
+                            <li>Con esta linea puedo recuperar un stash de forma puntual citanto su hash</li>
+                            <li>Al hacer de nuevo un "git stash" lo regreso al stash pero lo duplicará, eviandolo al stash@{0}</li>
+                        </ul>
+                    </li>
+                    <li>git stash drop stash@{#}
+                        <ul>
+                            <li>Con esta linea pueo eliminar de fomra puntual un stash</li>
+                        </ul>
+                    </li>
+                    <li>git stash show stash@{#}
+                        <ul>
+                            <li>Con esta linea puedo obtener informacion de un stahs puntual</li>
+                        </ul>
+                    </li>
+                    <li>git rebase ramaInvolucrada
+                        <ul>
+                            <li>Reposiciona los commits de una rama con otra rama</li>
+                            <li>Debo estar posicionado en la rama a donde quiero que se muevan los cambios</li>
+                            <li>Despues me cambio de rama</li>
+                            <li>Hago merge</li>
+                            <li>Eliminar rama que ya no ocuparé</li>
+                        </ul>
+                    </li>
+                    <li>git rebase -i HEAD~#
+                        <ul>
+                            <li>el head puede ser sustituido por un tag o hash</li>
+                            <li># equivale al numero de commits que deseo editar</li>
+                            <li>entramos al modo de edicion:
+                                <ul>
+                                    <li>a para editar</li>
+                                    <li>usar el comando que me proporciona la pantalla</li>
+                                    <li>si solo hare la union de dos commits, usare solo una "s" y en el siguiente commit dejar "p" </li>
+                                    <li>esc salir</li>
+                                    <li>w escribir</li>
+                                    <li>q salir</li>
+                                    <li>! salir</li>
+                                    <li>Confirmar el mensaje del commit</li>
+                                    <li>salir de nuevo de la interfaz con esc:wq!</li>
+                                </ul>
+                            </li>
+                            <li>separar commits
+                                <ul>
+                                    <li>git checkout -- file.html hara que omita los cambios del archivo</li>
+                                    <li>aqui puedo hacer un rebase interactivo con "git rebase -i HEAD~3"</li>
+                                    <li>"git commit --amend" me sirve para hacer cambios</li>
+                                    <li>"git rebase --continue" cuando este satisfecho con los cambios</li>
+                                    <li>el "git status" me muestra que estoy en un rebase interactivo</li>
+                                    <li>"git reset HEAD^" en el ejercicio hacen este comando, me regresara al momento haces de hacer la union de los commits</li>
+                                    <li>ahora puedo hacer "git add file.html" para subirlo al stage</li>
+                                    <li>"git s" me mostrara que un archivo esta en stage y el otro no</li>
+                                    <li>hago commit para agregar el cambio</li>
+                                    <li>hago un segundo commit con los cambios del otro archivo "git commit -am 'mensaje del commit'"</li>
+                                    <li>"git rebase --continue" para terminar el rebase</li>
+                                    <li>si me presenta un error "detached" puedo hacer "git checkout master"</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>github
+                        <ul>
+                            <li>git remote add origin https://github.com/Bartndel/udemyWebGitHub.git
+                                <ul>
+                                    <li>En github creamos repositorio</li>
+                                    <li>en git uso esta linea para agregar mi repositorio remoto</li>
+                                </ul>
+                            </li>
+                            <li>git remote -v 
+                                <ul>
+                                    <li>Revisar las fuentes remotas del repositorio</li>
+                                </ul>
+                            </li>
+                            <li>git push -u origin main
+                                <ul>
+                                    <li>Origin es el repositorio remoto</li>
+                                    <li>main es la raa a donde seran enviados mis cambios</li>
+                                    <li>-u me ayuda a que la proxima vez que haga push, no necesite especificar la rama</li>
+                                </ul>
+                            </li>
+                            <li>git push --tags
+                                <ul>
+                                    <li>Esta linea me sirve para hacer push de las etiquetas en mi repositorio local</li>
+                                </ul>
+                            </li>
+                            <li>git clone https://github.com/Bartndel/udemyWebGitHub.git
+                                <ul>
+                                    <li>Esta linea hara que pueda clonar mi repositorio localmente</li>
+                                    <li>Debo estar colocado en el directorio donde creare el repositorio</li>
+                                    <li>Y ejecutar en la terminal este comando</li>
+                                    <li>Me creara una carpeta dentro de la carpeta asi que debo seleecionar bien la ruta</li>
+                                </ul>
+                            </li>
+                            <li>git config --global pull.ff only
+                                <ul>
+                                    <li>Con esta linea configuro mi sistema para que aplique esta tecnica por defecto</li>
+                                    <li>puedo revisar esta configuracion en "git config --global -e"</li>
+                                </ul>
+                            </li>
+                            <li>git pull --rebase
+                                <ul>
+                                    <li>Esta línea me sirve para resolver conflictos en un pull con conflictos por los cambios realizados en git y github</li>
+                                    <li>En el curso se sugiere "git config pull.rebase true" pero no funciona y aborta la operación</li>
+                                    <li>Continuo en rebase</li>
+                                    <li>Hago commit para confirmar los cambios</li>
+                                    <li>Continuo en rebase</li>
+                                    <li>git rebase --continue oara salir del rebase interactivo</li>
+                                </ul>
+                            </li>
+                            <li>git fetch
+                                <ul>
+                                    <li>Este comando me permite actualizar mis referencias sin hacer pull</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
             </ul>
-        </li>
-        <li>doble guion significa una palabra completa</li>
-        <li>un guion es una abreviatura</li>
-        <li>git --version
-            <ul>
-                <li>indica la version instalada de git</li>
-            </ul>
-        </li>
-        <li>git help
-            <ul>
-                <li>informacion sobre la yuda de git</li>
-            </ul>
-        </li>
-        <li>git --help commit
-            <ul>
-                <li>Mostrará ayuda sobre el comando 'commit'</li>
-            </ul>
-        </li>
-        <li>git --help config
-            <ul>
-                <li>muestra las opciones distintas de configuracion</li>
-            </ul>
-        </li>
-        <li>git config --global user.name "nombre de usuario"
-            <ul>
-                <li>Este comando nos permitirá introducir el nombre de usuario</li>
-            </ul>
-        </li>
-        <li>git config --global user.email "direccion@correo.com"
-            <ul>
-                <li>Este comando nos permitirá introducir el correo de usuario</li>
-            </ul>
-        </li>
-        <li>git config --global -e
-            <ul>
-                <li>Este comando nos permite confirmar los datos anteriores</li>
-                <li>para salir usaremos:
-                    <ul>
-                        <li>esc</li>
-                        <li>dos puntos</li>
-                        <li>w para escribir</li>
-                        <li>q de quit</li>
-                        <li>! para salir</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>git init
-            <ul>
-                <li>Crea, inicia el repositorio</li>
-            </ul>
-        </li>
-        <li>git config --global init.defaultBranch "name"
-            <ul>
-                <li>Linea que nos sugiere git para renombrar la rama principal de nuestro repositorio</li>
-            </ul>
-        </li>
-        <li>gist status
-            <ul>
-                <li>Nos daraá información sobre nuestro repositorio</li>
-            </ul>
-        </li>
-        <li>git add .
-            <ul>
-                <li>Prepara todos los archivos para hacer commit</li>
-            </ul>
-        </li>
-        <li>git reset archivoQueNoQuieroHacerCommir.txt
-            <ul>
-                <li>Hará que el archivo especificado no sea considerado para el commit</li>
-            </ul>
-        </li>
-        <li>git commit -m "Primer commit"
-            <ul>
-                <li>Linea que hacemos cuando queremos hacer un commit agregando una breve descripcion al titulo</li>
-            </ul>
-        </li>
-        <li>CRLF
-            <ul>
-                <li>Se refiere a una interpretación de un caracter</li>
-                <li>git config core.autocrlf true</li>
-                <li>linea sugerida para reparar este error</li>
-            </ul>
-        </li>
-        <li>git checkout -- .
-            <ul>
-                <li>Este comando hará que volvamos a nuestro ultimo commit</li>
-            </ul>
-        </li>
-        <li>git branch
-            <ul>
-                <li>mostrara la rama en la que estamos ubicados</li>
-            </ul>
-        </li>
-        <li>git branch -m master main
-            <ul>
-                <li>Ésta línea cambiará el nombre de "master" a "main"</li>
-            </ul>
-        </li>
-        <li>git config --global init.defaultBranch main
-            <ul>
-                <li>Esta línea hará la configuración de forma global, de tal modo que afectará a todos los repositorios que se hagan en el equipo</li>
-                <li>git config --global -e (para comprobar en init)</li>
-                <li>: q ! para salir</li>
-            </ul>
-        </li>
-        <li>git commit -am "Descripcion del commit"
-            <ul>
-                <li>Con este comando no podemos ahorrar el comando "add ."" y "commit" en uno solo</li>
-                <li>este comando solo funciona si ya le estamos dando seguimiento al archivo</li>
-            </ul>
-        </li>
-        <li>.gitkeep
-            <ul>
-                <li>Este es un archivo que nos servirá para colocarlos en carpetas vacías pero que necesitamos se les de seguimiento con git</li>
-            </ul>
-        </li>
-        <li>git add css/
-            <ul>
-                <li>Esta línea hará que se agreguen al stage todos los archivos de la carpeta css</li>
-            </ul>
-        </li>
-        <li>git status --short
-            <ul>
-                <li>Informe condensado del repositorio</li>
-            </ul>
-        </li>
-        <li>git config --global alias.(letra designada por nosotros) "status --short"
-            <ul>
-                <li>Esta linea nos servira para crear nuestros propios alias</li>
-            </ul>
-        </li>
-        <li>git config --global -e
-            <ul>
-                <li>Esta linea nos sirve para editar los alias</li>
-                <li>Para salir:
-                    <ul>
-                        <li>esc</li>
-                        <li>dos puntos</li>
-                        <li>w (escribir)</li>
-                        <li>q (salir)</li>
-                        <li>!</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>git diff
-            <ul>
-                <li>"a" es la version anterior</li>
-                <li>"b" es la version actual</li>
-            </ul>
-        </li>
-        <li>git diff --staged
-            <ul>
-                <li>Con esta línea podremos ver la información cuando los archivos esten en el "stage"</li>
-            </ul>
-        </li>
-        <li>git commit --amend -m "Mensaje del commit"
-            <ul>
-                <li>Con este comando podemos editar el texto de nuestro commit</li>
-            </ul>
-        </li>
-        <li>git reset --soft HEAD^
-            <ul>
-                <li>HEAD está apuntando al último commit</li>
-                <li>^ indica el ultimo commit antes del HEAD</li>
-                <li>^2, ^3, podemos establecer tantos commits anteriores como deseemos</li>
-            </ul>
-        </li>
-        <li>$ git add -A
-            <ul>
-                <li>git config core.autocrlf true</li>
-                <li>Si tenemos esta advertencia, podemos configurar la linea superior para evitar que se presente</li>
-            </ul>
-        </li>
-        <li>git reset --soft "hash"
-            <ul>
-                <li>Esta línea nos permite ir a un commit determinado y agregar información</li>
-                <li>Llos commits postyeriores al commit seleccionado se perderán</li>
-            </ul>
-        </li>
-        <li>git reflog
-            <ul>
-                <li>Muestra el historial de los commits realizados</li>
-            </ul>
-        </li>
-        <li>git reset --hard "hash"
-            <ul>
-                <li>Con esta linea podemos volver al estado del repositorio que necesitemos</li>
-            </ul>
-        </li>
-        <li>git mv file.md file2.md
-            <ul>
-                <li>Con esta linea podemos renomnrar nuestros archivos y no perder en el index el registros de cuando fue creado y cuando fue renombrado</li>
-                <li>Se debe hacer commit para que el comando proceda</li>
-                <li>Una vez renombrado, debemos hacer commit para guardad dicho cambio</li>
-            </ul>
-        </li>
-        <li>Tipos de reset
-            <ul>
-                <li>Soft
-                    <ul>
-                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
-                        <li>Conserva los cambios en el stage area</li>
-                        <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
-                    </ul>
-                </li>
-                <li>Mixed
-                    <ul>
-                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
-                        <li>Deshace los cambios en el stage area</li>
-                        <li>Conserva los cambios que tengas en tus archivos (working directory)</li>
-                    </ul>
-                </li>
-                <li>Hard
-                    <ul>
-                        <li>"Elimina" los commits posteriores al commit al que estas haciendo el reset</li>
-                        <li>Deshace los cambios en el stage area</li>
-                        <li>Deshace los cambios que tengas en tus archivos (working directory)</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>git rm file-to-delete.md
-            <ul>
-                <li>Con esta línea podemos eliminar archivos en git</li>
-                <li>Si hacemos git "checkout -- ." o git reset --hard" podremos recuperer el archivo, ya que este aun permanece en el stage</li>
-                <li>Para terminar de eliminar el archivo debemos hacer un commit</li>
-            </ul>
-        </li>
-        <li>Fuera de git
-            <ul>
-                <li>Para renombnrar fuera de git, despues de cambiar el nombre, tenemos que añadir el archivo al stage y despues hacer commit</li>
-                <li>Para eliminar, despues de haber eliminado el archivo, debemos hacer un commit</li>
-            </ul>
-        </li>
-        <li>git branch ramaNueva
-            <ul>
-                <li>Este comando nos sirve para crear ramas nuevas</li>
-            </ul>
-        </li>
-        <li>git checkout ramaNueva
-            <ul>
-                <li>Con esta línea nos podemos cambiar de rama</li>
-            </ul>
-        </li>
-        <li>git merge ramaNueva
-            <ul>
-                <li>Con esta línea podemos unir nuestra rama secundaria a la principal</li>
-                <li>Para hacer esta operacion tenemoas quwe estar en la rama destino</li>
-            </ul>
-        </li>
-        <li>git branch
-            <ul>
-                <li>Con esta linea podemos ver cuantas ramas existen en nuestro repositorio</li>
-            </ul>
-        </li>
-        <li>git branch -d ramaNueva
-            <ul>
-                <li>Con esta línea eliminamos las ramas</li>
-            </ul>
-        </li>
-        <li>git branch -d ramaNueva -f
-            <ul>
-                <li>Con esta línea forzamos la eliminacion de la rama en caso de estar haciendo el merge con información que no se esté usando</li>
-            </ul>
-        </li>
-        <li>git checkout -b ramaNueva
-            <ul>
-                <li>Con esta linea creamos una rama nueva y al mismo tiempo nos cambiamos hacia ella</li>
-            </ul>
-        </li>
-        <li>git tag nombreEtiqueta
-            <ul>
-                <li>Con esta línea podemos hacer tags en nuestro repositorio</li>
-            </ul>
-        </li>
-        <li>git tag
-            <ul>
-                <li>Usamos este comando para ver las etiquetas en nuestro repositorio</li>
-            </ul>
-        </li>
-        <li>git tag -d nombreEtiqueta
-            <ul>
-                <li>Con esta linea podemos eliminar nuestras etiquetas</li>
-            </ul>
-        </li>
-        <li>git tag -a v1.0.0 #HASH
-            <ul>
-                <li>Crea una etiqueta posicionada con el HASH que le indiquemos</li>
-            </ul>
-        </li>
-        <li>git show nombreEtiqueta
-            <ul>
-                <li>Con esta linea podemos obtener informacion de la etiqueta a la que hagamos referencia</li>
-            </ul>
-        </li>
-        <li>git stash
-            <ul>
-                <li>Guarda el directorio, lo indexa, wip</li>
-                <li>sin hacer commit</li>
-            </ul>
-        </li>
-        <li>git stash list
-            <ul>
-                <li>Muestra la informacion sobre los stahs existentes</li>
-            </ul>
-        </li>
-        <li>git stash pop
-            <ul>
-                <li>Con esta linea volvemos a tener aceso a la informacion que enviamos al stash</li>
-            </ul>
-        </li>
-        <li>git stash clear
-            <ul>
-                <li>Con esta linea podemoseliminar todos los stashs</li>
-                <li>siempre podemos usar "git reflog" para recuperar los hash</li>
-            </ul>
-        </li>
-        <li>git stash save "descripcion del stash"
-            <ul>
-                <li>Poedemos usar esta linea para guardar el stash con una breve descripcion</li>
-            </ul>
-        </li>
-        <li>git stash list --stat
-            <ul>
-                <li>Con esta linea puedo tener acceso a mas informacion sobre los stashs existentes</li>
-            </ul>
-        </li>
-        <li>git stash apply stash@{#}
-            <ul>
-                <li>Con esta linea puedo recuperar un stash de forma puntual citanto su hash</li>
-                <li>Al hacer de nuevo un "git stash" lo regreso al stash pero lo duplicará, eviandolo al stash@{0}</li>
-            </ul>
-        </li>
-        <li>git stash drop stash@{#}
-            <ul>
-                <li>Con esta linea pueo eliminar de fomra puntual un stash</li>
-            </ul>
-        </li>
-        <li>git stash show stash@{#}
-            <ul>
-                <li>Con esta linea puedo obtener informacion de un stahs puntual</li>
-            </ul>
-        </li>
-        <li>git rebase ramaInvolucrada
-            <ul>
-                <li>Reposiciona los commits de una rama con otra rama</li>
-                <li>Debo estar posicionado en la rama a donde quiero que se muevan los cambios</li>
-                <li>Despues me cambio de rama</li>
-                <li>Hago merge</li>
-                <li>Eliminar rama que ya no ocuparé</li>
-            </ul>
-        </li>
-        <li>git rebase -i HEAD~#
-            <ul>
-                <li>el head puede ser sustituido por un tag o hash</li>
-                <li># equivale al numero de commits que deseo editar</li>
-                <li>entramos al modo de edicion:
-                    <ul>
-                        <li>a para editar</li>
-                        <li>usar el comando que me proporciona la pantalla</li>
-                        <li>si solo hare la union de dos commits, usare solo una "s" y en el siguiente commit dejar "p" </li>
-                        <li>esc salir</li>
-                        <li>w escribir</li>
-                        <li>q salir</li>
-                        <li>! salir</li>
-                        <li>Confirmar el mensaje del commit</li>
-                        <li>salir de nuevo de la interfaz con esc:wq!</li>
-                    </ul>
-                </li>
-                <li>separar commits
-                    <ul>
-                        <li>git checkout -- file.html hara que omita los cambios del archivo</li>
-                        <li>aqui puedo hacer un rebase interactivo con "git rebase -i HEAD~3"</li>
-                        <li>"git commit --amend" me sirve para hacer cambios</li>
-                        <li>"git rebase --continue" cuando este satisfecho con los cambios</li>
-                        <li>el "git status" me muestra que estoy en un rebase interactivo</li>
-                        <li>"git reset HEAD^" en el ejercicio hacen este comando, me regresara al momento haces de hacer la union de los commits</li>
-                        <li>ahora puedo hacer "git add file.html" para subirlo al stage</li>
-                        <li>"git s" me mostrara que un archivo esta en stage y el otro no</li>
-                        <li>hago commit para agregar el cambio</li>
-                        <li>hago un segundo commit con los cambios del otro archivo "git commit -am 'mensaje del commit'"</li>
-                        <li>"git rebase --continue" para terminar el rebase</li>
-                        <li>si me presenta un error "detached" puedo hacer "git checkout master"</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        
-        <li>github
-            <ul>
-                <li>git remote add origin https://github.com/Bartndel/udemyWebGitHub.git
-                    <ul>
-                        <li>En github creamos repositorio</li>
-                        <li>en git uso esta linea para agregar mi repositorio remoto</li>
-                    </ul>
-                </li>
-                <li>git remote -v 
-                    <ul>
-                        <li>Revisar las fuentes remotas del repositorio</li>
-                    </ul>
-                </li>
-                <li>git push -u origin main
-                    <ul>
-                        <li>Origin es el repositorio remoto</li>
-                        <li>main es la raa a donde seran enviados mis cambios</li>
-                        <li>-u me ayuda a que la proxima vez que haga push, no necesite especificar la rama</li>
-                    </ul>
-                </li>
-                <li>git push --tags
-                    <ul>
-                        <li>Esta linea me sirve para hacer push de las etiquetas en mi repositorio local</li>
-                    </ul>
-                </li>
-                <li>git clone https://github.com/Bartndel/udemyWebGitHub.git
-                    <ul>
-                        <li>Esta linea hara que pueda clonar mi repositorio localmente</li>
-                        <li>Debo estar colocado en el directorio donde creare el repositorio</li>
-                        <li>Y ejecutar en la terminal este comando</li>
-                        <li>Me creara una carpeta dentro de la carpeta asi que debo seleecionar bien la ruta</li>
-                    </ul>
-                </li>
-                <li>git config --global pull.ff only
-                    <ul>
-                        <li>Con esta linea configuro mi sistema para que aplique esta tecnica por defecto</li>
-                        <li>puedo revisar esta configuracion en "git config --global -e"</li>
-                    </ul>
-                </li>
-                <li>git pull --rebase
-                    <ul>
-                        <li>Esta línea me sirve para resolver conflictos en un pull con conflictos por los cambios realizados en git y github</li>
-                        <li>En el curso se sugiere "git config pull.rebase true" pero no funciona y aborta la operación</li>
-                        <li>Continuo en rebase</li>
-                        <li>Hago commit para confirmar los cambios</li>
-                        <li>Continuo en rebase</li>
-                        <li>git rebase --continue oara salir del rebase interactivo</li>
-                    </ul>
-                </li>
-                <li>git fetch
-                    <ul>
-                        <li>Este comando me permite actualizar mis referencias sin hacer pull</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+        </section>
+
+</main>
 
     <footer>
         
